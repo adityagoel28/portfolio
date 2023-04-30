@@ -231,7 +231,7 @@ import {
     {
       name: "Video Captioning",
       description:
-        "A model for automated collection of natural language phrases that explains the contents of video frames with the help of MSVD dataset. Extracted visual features from consecutive video frames and generated natural language captions to describe the video content effectively..",
+        "A model for automated collection of natural language phrases that explains the contents of video frames with the help of MSVD dataset. Extracted visual features from consecutive video frames and generated natural language captions to describe the video content effectively.",
       tags: [
         {
           name: "Python",

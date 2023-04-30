@@ -1,14 +1,19 @@
-import { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Suspense, useEffect, useState, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Profile = ({ isMobile }) => {
-  // const profile = useGLTF('./avatar/scene.gltf');
   const profile = useGLTF('./avatar/model (2).glb');
 
+  const ref = useRef();
+  useFrame((state, delta) => {
+    const time = state.clock.getElapsedTime();
+    ref.current.position.y = Math.sin(time * 2) * 0.2;
+  });
+
   return (
-    <mesh>
+    <mesh ref={ref}>
       <hemisphereLight intensity={0.15} groundColor="black"/>
       <pointLight intensity={1} />
       <spotLight
@@ -46,9 +51,8 @@ const ProfileCanvas = () => {
 
   return (
     <Canvas
-    frameloop='demand' shadows camera={{position: [20, 3, 5], fov: 25}}
-    gl = {{preserveDrawingBuffer: true}}
-    >
+    frameloop='always' shadows camera={{position: [20, 3, 5], fov: 25}}
+    gl = {{preserveDrawingBuffer: true}} >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false}
         maxPolarAngle={Math.PI / 2}

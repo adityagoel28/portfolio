@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Profile = ({ isMobile }) => {
-  const profile = useGLTF('./avatar/model (2).glb');
+  const profile = useGLTF('./avatar/avatar.glb');
 
   const ref = useRef();
   useFrame((state, delta) => {

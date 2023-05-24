@@ -19,6 +19,7 @@ import {
     anastrat,
     ibm,
     alastor,
+    ETLPipeline,
     homepage,
     videoCaptioning,
     vid2text,
@@ -186,6 +187,28 @@ import {
   ];
   
   const projects = [
+    {
+      name: "ETL Pipeline Using Airflow and Reddit API",
+      description:
+      // why not in points
+        "Developed a custom ETL pipeline using Airflow and Reddit API to transform raw data and perform analysis.Configured AWS EC2 instance to Airflow, and created a DAG with a task to schedule the ETL script to run. Extracted data from Reddit API, transformed it, and loaded it into an AWS S3 bucket.",
+      tags: [
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "AWS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Apache Airflow",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: ETLPipeline,
+      source_code_link: "https://github.com/adityagoel28/ETL-Pipeline-Airflow-Reddit-API/",
+    },
     {
       name: "Vaccine Registration Website",
       description:

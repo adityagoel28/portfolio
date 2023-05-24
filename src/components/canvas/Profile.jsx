@@ -26,9 +26,9 @@ const Profile = ({ isMobile }) => {
         // scale = {isMobile ? 0.7 : 0.75}
         // position = {isMobile ? [0, -3, -2]: [0, -3.25, -1.5]}
         // rotation = {[-0.01, -0.2, -0.1]}
-        scale = {isMobile ? 0.7 : 3.6}
-        position = {isMobile ? [0, -3, -2]: [-2, -3.5, -7.2]}
-        rotation = {[0.12, 1.1, -0.1]}
+        scale = {isMobile ? 2.3 : 3.6}
+        position = {isMobile ? [-3.8, -3.8, -2]: [-2, -3.5, -7.2]}
+        rotation = {isMobile ? [0.12, 1.26, -0.1]: [0.12, 1.1, -0.1]}
         />
     </mesh>
   )

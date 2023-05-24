@@ -30,6 +30,7 @@ import anastrat from "./company/anastrat.png";
 import ibm from "./company/ibm.png";
 import alastor from "./company/alastor.png";
 
+import ETLPipeline from "./etl-pipeline.png";
 import homepage from "./homepage.jpg";
 import videoCaptioning from "./videoCaptioning.png";
 import vid2text from "./vid2text.jpg";
@@ -68,6 +69,7 @@ export {
   anastrat,
   ibm,
   alastor,
+  ETLPipeline,
   homepage,
   videoCaptioning,
   vid2text,
